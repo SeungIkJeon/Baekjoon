@@ -1,16 +1,20 @@
+import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Collections;
 
 public class Bj02 {
 
 	public static void main(String[] args) {
+		ArrayList<Integer> list = new ArrayList<Integer>();
 		Scanner input = new Scanner(System.in);
 		int count = input.nextInt();
-		int arr[] = new int[count];
 		for(int i=0; i<count; i++) {
-			arr[i] = input.nextInt();
+			int n = input.nextInt();
+			list.add(n);
 		}
-		for(int i=0; i<count; i++) {
-			
+		Collections.sort(list);
+		for(int i:list) {
+			System.out.println(i);
 		}
 	}
 
